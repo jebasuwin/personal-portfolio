@@ -29,16 +29,36 @@ export const Accomplishments = () => {
                       Certification Link
                     </a>
                   </p>
+                
+              </div>}
+              
+            </TrackVisibility>
+            <br></br><br></br><br></br>
+            
+          </Col>
+        </Row>
+      </Container>
+      <Container>
+        <Row>
+          <Col size={12}>
+          <TrackVisibility>
+              {({ isVisible }) =>
+              <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Interests</h2>
                 <li>Workouts 💪</li>
                 <li>Volley Ball 🏐</li>
                 <li>Photography 📸</li>
                 <li>Web Designing 💻</li>
+                <br></br><br></br><br></br><br></br>
               </div>}
+              
             </TrackVisibility>
+            
+            
           </Col>
         </Row>
       </Container>
+      
       <img className="background-image-right" src={colorSharp2}></img>
     </section>
   )

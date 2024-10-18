@@ -15,11 +15,11 @@ export const Footer = () => {
           <Col size={12} sm={6}>
             <div className="contact-details">
             <div className="social-icon">
-              <a href="#"><img src={telephone} alt="Icon" /></a> <span style={{ verticalAlign: 'middle' }}>+91 8870481461</span>
+              <a ><img src={telephone} alt="Icon" /></a> <span style={{ verticalAlign: 'middle' }}>+91 8870481461</span>
             </div>
             <div className="social-icon">
               <div>
-                <a href="#"><img src={envelope} alt="Icon" /></a> <span style={{ verticalAlign: 'middle' }}>suwinjeba@gmail.com</span>
+                <a ><img src={envelope} alt="Icon" /></a> <span style={{ verticalAlign: 'middle' }}>suwinjeba@gmail.com</span>
               </div>              
             </div>
             </div>

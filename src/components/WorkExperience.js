@@ -23,7 +23,7 @@ export const WorkExperience = () => {
                 <div className="text-center">
                 <img src={newLogo} alt="Company Logo" style={{ width: '150px' }} />
                 </div>
-                <p>Working as a Full Stack Developer Trainee <br></br>
+                <p>Working as a Full Stack Developer<br></br>
                 Aug 2024 - Present</p>
                 {/* <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
