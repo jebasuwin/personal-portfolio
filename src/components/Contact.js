@@ -30,10 +30,13 @@ export const Contact = () => {
               {({ isVisible }) => (
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <div id="ff-compose">
-                    <FormfacadeEmbed
-                      formFacadeURL="https://formfacade.com/include/101385643966515289543/form/1FAIpQLSfiRH4pLrPlQ0SMYesDLW5UtkzvIski4WM4rlE29TBZnO1bOg/classic.js/?div=ff-compose"
-                      onSubmitForm={handleFormSubmit}
-                    />
+                  <FormfacadeEmbed
+
+formFacadeURL="https://formfacade.com/include/106630070652424110910/form/1FAIpQLSe3_8q87C2sufWKe4aT3Qp4ruUq-f3SVrHuxm6k-_pHarg7xg/classic.js/?div=ff-compose"
+
+onSubmitForm={() => console.log('Form submitted')}
+
+/>
                   </div>
                 </div>
               )}

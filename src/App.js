@@ -10,19 +10,24 @@ import { WorkExperience } from './components/WorkExperience';
 import { EducationalBackground } from './components/EducationalBackground';
 import { Training } from './components/Training';
 import { Accomplishments } from './components/Accomplishments';
+import VideoBackground from './components/VideoBackground';
 
 function App() {
   return (
     <div className="App">
+      
+      <VideoBackground/>
       <NavBar />
       <Banner />
       <Skills />
-      <WorkExperience/>
-      <Projects />
-      <Training/>
-      <EducationalBackground/>
-      <Accomplishments/>
-      <Contact />
+      <main>
+        <WorkExperience/>
+        <Projects />
+        <Training/>
+        <EducationalBackground/>
+        <Accomplishments/>
+        <Contact />
+      </main>
       <Footer />
       
     </div>
