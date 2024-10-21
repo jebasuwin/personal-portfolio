@@ -684,9 +684,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 100%;
   z-index: -1;
   overflow: hidden;
+  background-color: #000000; /* Background color */
 }
 
 .video-background video {
+  display: none; /* Hide video initially */
   min-width: 100%;
   min-height: 100%;
   width: auto;
@@ -695,4 +697,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* Show video when it's ready */
+.video-background video.ready {
+  display: block;
 }
