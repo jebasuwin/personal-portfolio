@@ -684,7 +684,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 100%;
   z-index: -1;
   overflow: hidden;
-  background-color: #000000; /* Background color */
+  background-color: #12131d; /* Background color */
 }
 
 .video-background video {
@@ -701,5 +701,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* Show video when it's ready */
 .video-background video.ready {
-  display: block;
+  display: none;
+}
+
+
+a.ff-powered-img img{
+  opacity: 0!important;
 }
