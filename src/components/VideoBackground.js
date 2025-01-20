@@ -21,7 +21,7 @@ const VideoBackground = () => {
   return (
     <div className="video-background">
       <video autoPlay muted loop className="video" id="background-video">
-        <source src={myVideo} type="video/mp4" />
+        <source src={''} type="video/mp4" />
       </video>
     </div>
   );

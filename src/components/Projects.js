@@ -59,7 +59,7 @@ export const Projects = () => {
                     </Nav.Item>
                     <Nav.Item>
                       
-                      <Nav.Link eventKey="second">Employee<br></br>Management<br></br>System</Nav.Link>
+                      <Nav.Link eventKey="second">Auth<br></br>Login<br></br>Register</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                     <Nav.Link eventKey="third" >Ecommerce<br></br>Website</Nav.Link>
@@ -79,7 +79,7 @@ export const Projects = () => {
                     <Nav.Link eventKey="fifth">Bus Reservation<br></br> System</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="sixth">Coming <br></br>Soon</Nav.Link>
+                      <Nav.Link eventKey="sixth">Employee<br></br>Management<br></br>System</Nav.Link>
                     </Nav.Item>
                     
                     
@@ -104,21 +104,25 @@ export const Projects = () => {
 
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                    <li>
-                        Full Stack Application: Developed a comprehensive Employee Management System with interactive web pages for browsing, updating, and managing employee data using Java, Spring Boot, and MySQL for backend functionality.
-                      </li>
-                      <li>
-                        User Registration & Database Integration: Implemented secure user registration and efficient database handling with Spring Boot and MySQL, ensuring smooth user data storage and retrieval.
-                      </li>
-                      <li>
-                        CRUD Operations: Designed responsive web pages using ReactJS, HTML, CSS, and Bootstrap to support Create, Read, Update, and Delete (CRUD) operations for employee management.
-                      </li>
-                      <li>
-                        Frontend-Backend Synergy: Built a dynamic frontend with ReactJS and integrated it with a robust Java Spring Boot backend, enabling real-time data interaction and seamless user experience.<br></br>
-                      <a href="https://drive.google.com/file/d/1sG5UMEkr3sSgCN-TELnsMrdsBtaq23L0/view" target="_blank">
-                      Project Link
-                      </a>
-                      </li>
+                                            <li>
+                          Secure Authentication System: Developed a robust authentication mechanism using JWT tokens with Spring Boot, ensuring secure and seamless user login and session management.
+                        </li>
+                        <li>
+                          User Registration & Login: Implemented a user-friendly registration and login system, integrating password encryption and backend validation for secure data handling.
+                        </li>
+                        <li>
+                          Token-Based Authorization: Designed a system where only authenticated users with valid JWT tokens can access protected endpoints, enhancing security and access control.
+                        </li>
+                        <li>
+                          Product Management with CRUD Operations: Built a feature-rich product management module enabling authenticated users to perform Create, Read, Update, and Delete (CRUD) operations on product data via a ReactJS frontend and Spring Boot backend.
+                        </li>
+                        <li>
+                          Frontend-Backend Integration: Seamlessly connected the ReactJS-based frontend with the Spring Boot backend, providing real-time interaction, efficient data handling, and a smooth user experience.<br></br>
+                          <a href="https://github.com/jebasuwin/Auth-Login-Register" target="_blank">
+                            Project Link
+                          </a>
+                        </li>
+
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
                     <li>
@@ -154,15 +158,21 @@ export const Projects = () => {
                       
                     </Tab.Pane>
                     <Tab.Pane eventKey="sixth">
-                    {/* <li>
-                        A Bus Reservation Project with JDBC involves creating a software system that allows users to search for and reserve bus tickets.
+                    <li>
+                        Full Stack Application: Developed a comprehensive Employee Management System with interactive web pages for browsing, updating, and managing employee data using Java, Spring Boot, and MySQL for backend functionality.
                       </li>
                       <li>
-                        It connects to a database to store and retrieve information, providing a seamless and efficient way for customers to book their journeys.<br></br>
-                      <a href="https://github.com/jebasuwin/BusReservation/tree/main/BusResv" target="_blank">
+                        User Registration & Database Integration: Implemented secure user registration and efficient database handling with Spring Boot and MySQL, ensuring smooth user data storage and retrieval.
+                      </li>
+                      <li>
+                        CRUD Operations: Designed responsive web pages using ReactJS, HTML, CSS, and Bootstrap to support Create, Read, Update, and Delete (CRUD) operations for employee management.
+                      </li>
+                      <li>
+                        Frontend-Backend Synergy: Built a dynamic frontend with ReactJS and integrated it with a robust Java Spring Boot backend, enabling real-time data interaction and seamless user experience.<br></br>
+                      <a href="https://drive.google.com/file/d/1sG5UMEkr3sSgCN-TELnsMrdsBtaq23L0/view" target="_blank">
                       Project Link
                       </a>
-                      </li>                     */}
+                      </li>
                       </Tab.Pane>
                       
                       <Tab.Pane eventKey="fourth">
