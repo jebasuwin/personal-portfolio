@@ -4,6 +4,7 @@ import headerImg from "../assets/img/work.webp";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import '../App.css'; // 👈 Add this line to include animation styles
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -12,7 +13,6 @@ export const Banner = () => {
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
 
-  // ✅ useMemo prevents re-creation of the array on each render
   const toRotate = useMemo(() => [
     "Full Stack Java Developer",
     "Software Developer"
@@ -64,7 +64,9 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <span className="tagline">Welcome back!</span>
+                  {/* ✨ Animated Welcome Back Text ✨ */}
+                  <h2 className="typing-text">Welcome back!</h2>
+
                   <h1>
                     {`Hi! I'm Jeba Suwin, `}
                     <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Full Stack Java Developer", "Java Developer", "Software Developer"]'>

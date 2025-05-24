@@ -51,15 +51,15 @@ function App() {
           <WorkExperience />
         </div>
 
-        <div data-aos="fade-left">
+        <div data-aos="zoom-in-down">
           <Projects />
         </div>
 
-        <div data-aos="zoom-in-up">
+        <div data-aos="fade-left">
           <Training />
         </div>
 
-        <div data-aos="flip-left">
+        <div data-aos="fade-right">
           <EducationalBackground />
         </div>
 

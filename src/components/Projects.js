@@ -2,44 +2,19 @@ import React, { useState } from "react";
 import { Container, Row, Col, Nav } from "react-bootstrap";
 import { motion } from "framer-motion";
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import '../App.css';
+import "../App.css";
 
 const projects = [
   {
-    key: "akherbs",
-    title: "AKHerbs Ecommerce",
+    key: "homiefix",
+    title: "HomieFix Application",
     details: [
-      "The AkHerbs eCommerce website showcases herbal products with a user-friendly layout.",
-      "Seamless shopping experience with optimized navigation and mobile responsiveness.",
-      "Built on WordPress WooCommerce for secure payments and reliable backend.",
-      'Visit: <a href="https://www.akherbs.in" target="_blank" rel="noreferrer">akherbs.in</a>',
-    ],
-  },
-  {
-    key: "authsystem",
-    title: "Auth System",
-    details: [
-      "Secure JWT Authentication with Spring Boot backend.",
-      "User Registration, Login, and Authorization with protected routes.",
-      "CRUD operations on products using React + Spring Boot.",
-      'Source code: <a href="https://github.com/jebasuwin/Auth-Login-Register" target="_blank" rel="noreferrer">GitHub</a>',
-    ],
-  },
-  {
-    key: "textile",
-    title: "Textile Ecommerce",
-    details: [
-      "Showcases textile products in a responsive static site.",
-      "Frontend React, backend Spring Boot.",
-      'Live demo: <a href="https://jebasuwin.github.io/Textile--Ecommerce/" target="_blank" rel="noreferrer">Project Link</a>',
-    ],
-  },
-  {
-    key: "grocery",
-    title: "Grocery Website",
-    details: [
-      "Simple responsive grocery website with HTML & CSS.",
-      'Repo: <a href="https://github.com/jebasuwin/GroceryProjects" target="_blank" rel="noreferrer">GitHub</a>',
+      "Developed backend APIs for the mobile app and full-stack web admin panel.",
+      "Implemented OTP login (Twilio), JWT authentication, and role-based access.",
+      "Integrated push notifications, email alerts, and dynamic dashboards.",
+      "Managed service booking, pricing, and user modules with MySQL.",
+      "Built responsive UI with React.js and Bootstrap for admin operations. ",
+      'Visit: <a href="https://homiefix.in/" target="_blank" rel="noreferrer">homiefix.in</a>',
     ],
   },
   {
@@ -67,16 +42,8 @@ const projects = [
     title: "Textile Ecommerce",
     details: [
       "Showcases textile products in a responsive static site.",
-      "Frontend React, backend Spring Boot.",
-      'Live demo: <a href="https://jebasuwin.github.io/Textile--Ecommerce/" target="_blank" rel="noreferrer">Project Link</a>',
-    ],
-  },
-  {
-    key: "grocery",
-    title: "Grocery Website",
-    details: [
-      "Simple responsive grocery website with HTML & CSS.",
-      'Repo: <a href="https://github.com/jebasuwin/GroceryProjects" target="_blank" rel="noreferrer">GitHub</a>',
+      "Seamless shopping experience with optimized navigation and mobile responsiveness.",
+      'Project Link: <a href="https://jebasuwin.github.io/Textile--Ecommerce/" target="_blank" rel="noreferrer">Project Link</a>',
     ],
   },
 ];
@@ -118,16 +85,15 @@ export const Projects = () => {
 
         {/* Scrollable pills wrapper */}
         <div
-  style={{
-    display: "flex",
-    flexWrap: "wrap", // allow wrapping on smaller screens
-    justifyContent: "center",
-    rowGap: "10px",
-    columnGap: "10px",
-    marginBottom: "20px",
-  }}
->
-
+          style={{
+            display: "flex",
+            flexWrap: "wrap", // allow wrapping on smaller screens
+            justifyContent: "center",
+            rowGap: "10px",
+            columnGap: "10px",
+            marginBottom: "20px",
+          }}
+        >
           <Nav
             variant="pills"
             activeKey={activeKey}
@@ -135,16 +101,20 @@ export const Projects = () => {
             style={{ display: "inline-flex" }}
           >
             {projects.map(({ key, title }) => (
-              <Nav.Item key={key} style={{ display: "inline-block", margin: "0 10px" }}>
-                <Nav.Link className="nav-link-custom"
-                  eventKey={key} 
+              <Nav.Item
+                key={key}
+                style={{ display: "inline-block", margin: "0 10px" }}
+              >
+                <Nav.Link
+                  className="nav-link-custom"
+                  eventKey={key}
                   style={{
                     cursor: "pointer",
                     fontWeight: activeKey === key ? "700" : "700",
                     fontSize: "1.1rem",
                     color: activeKey === key ? "#fff" : "#fff",
                     whiteSpace: "normal", // allow wrapping if needed
-                     border: "none",
+                    border: "none",
                   }}
                 >
                   {title}
@@ -164,7 +134,7 @@ export const Projects = () => {
               className="bg-white bg-opacity-10 p-4 rounded-3 shadow-lg"
               style={{ backdropFilter: "blur(10px)" }}
             >
-              <h3 className="mb-3">{selectedProject.title}</h3>
+              <h3 className="mb-3 text-center">{selectedProject.title}</h3>
               <ul
                 className="list-unstyled"
                 style={{ lineHeight: "1.6", fontSize: "1.1rem" }}

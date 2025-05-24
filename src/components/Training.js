@@ -22,14 +22,15 @@ export const Training = () => {
                 </div>
                 <p>Full Stack Development- Besant Technologies, Bangalore<br></br>
                 Jul 2023 - Mar 2024<br></br>
-                <a href="https://drive.google.com/file/d/1sG5UMEkr3sSgCN-TELnsMrdsBtaq23L0/view" target="_blank">
+                {/* <a href="https://drive.google.com/file/d/1sG5UMEkr3sSgCN-TELnsMrdsBtaq23L0/view" target="_blank">
                       Certification Link
-                </a><br></br><br></br>
+                </a>*/}
+                <br></br><br></br> 
                 Manual Testing- Besant Technologies, Bangalore<br></br>
                 Jul 2023 - Mar 2024<br></br>
-                <a href="https://drive.google.com/file/d/1sG5UMEkr3sSgCN-TELnsMrdsBtaq23L0/view" target="_blank">
+                {/* <a href="https://drive.google.com/file/d/1sG5UMEkr3sSgCN-TELnsMrdsBtaq23L0/view" target="_blank">
                       Certification Link
-                </a>
+                </a> */}
                 <br></br><br></br>
                 Introduction to Python- Internshala<br></br>
                 Apr 2021 - Jul 2021<br></br>
