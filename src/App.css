@@ -708,3 +708,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 a.ff-powered-img img{
   opacity: 0!important;
 }
+
+@media (max-width: 575.98px) {
+  .nav-link-custom {
+    text-align: center!important;
+    justify-content: center!important;
+    align-items: center!important;
+    display: flex!important;
+    margin: 0 50%!important;
+  }
+}

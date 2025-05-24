@@ -1,5 +1,9 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'aos/dist/aos.css'; // AOS styles
+import AOS from 'aos';
+import { useEffect } from 'react';
+
 import { NavBar } from "./components/NavBar";
 import { Banner } from "./components/Banner";
 import { Skills } from "./components/Skills";
@@ -13,23 +17,64 @@ import { Accomplishments } from './components/Accomplishments';
 import VideoBackground from './components/VideoBackground';
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,     // Make sure animations repeat
+      mirror: true,    // Trigger animations when scrolling up
+      offset: 100,     // Adjust how early the animation should start
+    });
+
+    // Refresh AOS on scroll to prevent sync issues
+    const onScroll = () => AOS.refresh();
+    window.addEventListener('scroll', onScroll);
+    
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <div className="App">
+      <VideoBackground />
+
       
-      <VideoBackground/>
-      <NavBar />
-      <Banner />
-      <Skills />
+        <NavBar />
+      
+
+      <div data-aos="fade-up">
+        <Banner />
+      </div>
+
+        <Skills />
+
       <main>
-        <WorkExperience/>
-        <Projects />
-        <Training/>
-        <EducationalBackground/>
-        <Accomplishments/>
-        <Contact />
+        <div data-aos="fade-right">
+          <WorkExperience />
+        </div>
+
+        <div data-aos="fade-left">
+          <Projects />
+        </div>
+
+        <div data-aos="zoom-in-up">
+          <Training />
+        </div>
+
+        <div data-aos="flip-left">
+          <EducationalBackground />
+        </div>
+
+        <div data-aos="fade-up">
+          <Accomplishments />
+        </div>
+
+        <div data-aos="zoom-in-up">
+          <Contact />
+        </div>
       </main>
-      <Footer />
-      
+
+      <div data-aos="fade-up">
+        <Footer />
+      </div>
     </div>
   );
 }

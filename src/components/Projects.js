@@ -1,199 +1,186 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-// import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import React, { useState } from "react";
+import { Container, Row, Col, Nav } from "react-bootstrap";
+import { motion } from "framer-motion";
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import 'animate.css';
-import TrackVisibility from 'react-on-screen';
+import '../App.css';
+
+const projects = [
+  {
+    key: "akherbs",
+    title: "AKHerbs Ecommerce",
+    details: [
+      "The AkHerbs eCommerce website showcases herbal products with a user-friendly layout.",
+      "Seamless shopping experience with optimized navigation and mobile responsiveness.",
+      "Built on WordPress WooCommerce for secure payments and reliable backend.",
+      'Visit: <a href="https://www.akherbs.in" target="_blank" rel="noreferrer">akherbs.in</a>',
+    ],
+  },
+  {
+    key: "authsystem",
+    title: "Auth System",
+    details: [
+      "Secure JWT Authentication with Spring Boot backend.",
+      "User Registration, Login, and Authorization with protected routes.",
+      "CRUD operations on products using React + Spring Boot.",
+      'Source code: <a href="https://github.com/jebasuwin/Auth-Login-Register" target="_blank" rel="noreferrer">GitHub</a>',
+    ],
+  },
+  {
+    key: "textile",
+    title: "Textile Ecommerce",
+    details: [
+      "Showcases textile products in a responsive static site.",
+      "Frontend React, backend Spring Boot.",
+      'Live demo: <a href="https://jebasuwin.github.io/Textile--Ecommerce/" target="_blank" rel="noreferrer">Project Link</a>',
+    ],
+  },
+  {
+    key: "grocery",
+    title: "Grocery Website",
+    details: [
+      "Simple responsive grocery website with HTML & CSS.",
+      'Repo: <a href="https://github.com/jebasuwin/GroceryProjects" target="_blank" rel="noreferrer">GitHub</a>',
+    ],
+  },
+  {
+    key: "akherbs",
+    title: "AKHerbs Ecommerce",
+    details: [
+      "The AkHerbs eCommerce website showcases herbal products with a user-friendly layout.",
+      "Seamless shopping experience with optimized navigation and mobile responsiveness.",
+      "Built on WordPress WooCommerce for secure payments and reliable backend.",
+      'Visit: <a href="https://www.akherbs.in" target="_blank" rel="noreferrer">akherbs.in</a>',
+    ],
+  },
+  {
+    key: "authsystem",
+    title: "Auth System",
+    details: [
+      "Secure JWT Authentication with Spring Boot backend.",
+      "User Registration, Login, and Authorization with protected routes.",
+      "CRUD operations on products using React + Spring Boot.",
+      'Source code: <a href="https://github.com/jebasuwin/Auth-Login-Register" target="_blank" rel="noreferrer">GitHub</a>',
+    ],
+  },
+  {
+    key: "textile",
+    title: "Textile Ecommerce",
+    details: [
+      "Showcases textile products in a responsive static site.",
+      "Frontend React, backend Spring Boot.",
+      'Live demo: <a href="https://jebasuwin.github.io/Textile--Ecommerce/" target="_blank" rel="noreferrer">Project Link</a>',
+    ],
+  },
+  {
+    key: "grocery",
+    title: "Grocery Website",
+    details: [
+      "Simple responsive grocery website with HTML & CSS.",
+      'Repo: <a href="https://github.com/jebasuwin/GroceryProjects" target="_blank" rel="noreferrer">GitHub</a>',
+    ],
+  },
+];
 
 export const Projects = () => {
+  const [activeKey, setActiveKey] = useState(projects[0].key);
 
-  const projects = [
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-  ];
+  const selectedProject = projects.find((p) => p.key === activeKey);
 
   return (
-    <section className="project" id="projects">
-      <Container>
-        <Row>
-          <Col size={12}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Projects</h2>
-                <br></br>
-                <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first">AKHerbs<br></br>Ecommerce<br></br>Website</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      
-                      <Nav.Link eventKey="second">Auth<br></br>Login<br></br>Register</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                    <Nav.Link eventKey="third" >Ecommerce<br></br>Website</Nav.Link>
-                    </Nav.Item>
-                    
-                    
-                  </Nav>
+    <section
+      id="projects"
+      className="project min-vh-100 py-5 position-relative text-white"
+      style={{
+        backgroundImage: `url(${colorSharp2})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundColor: "rgba(0,0,0,0.7)",
+          zIndex: 0,
+        }}
+      ></div>
 
-                  
+      <Container style={{ position: "relative", zIndex: 10 }}>
+        <motion.h2
+          className="text-center mb-5"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          My Projects
+        </motion.h2>
 
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                    <Nav.Item>
-                      
-                      <Nav.Link eventKey="fourth">Grocery<br></br>Website</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                    <Nav.Link eventKey="fifth">Bus Reservation<br></br> System</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="sixth">Employee<br></br>Management<br></br>System</Nav.Link>
-                    </Nav.Item>
-                    
-                    
-                  </Nav>
-                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                    <Tab.Pane eventKey="first">
-                    <li>
-                      The AkHerbs eCommerce website is designed to showcase a curated selection of herbal products in a visually appealing and user-friendly layout.
-                    </li>
-                    <li>
-                      It focuses on delivering a seamless shopping experience with intuitive navigation, optimized product categorization, and mobile responsiveness.
-                    </li>
-                    <li>
-                      The WooCommerce-powered structure ensures efficient product management, secure payment gateways, and a reliable backend for handling orders and inventory.
-                    </li>
-                    <li>
-                      Developed on WordPress using WooCommerce, the website integrates customizable themes and plugins to enhance functionality and user experience.<br></br>
-                      <a href="https://www.akherbs.in" target="_blank">
-                        Project Link
-                      </a>
-                    </li>
+        {/* Scrollable pills wrapper */}
+        <div
+  style={{
+    display: "flex",
+    flexWrap: "wrap", // allow wrapping on smaller screens
+    justifyContent: "center",
+    rowGap: "10px",
+    columnGap: "10px",
+    marginBottom: "20px",
+  }}
+>
 
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="second">
-                                            <li>
-                          Secure Authentication System: Developed a robust authentication mechanism using JWT tokens with Spring Boot, ensuring secure and seamless user login and session management.
-                        </li>
-                        <li>
-                          User Registration & Login: Implemented a user-friendly registration and login system, integrating password encryption and backend validation for secure data handling.
-                        </li>
-                        <li>
-                          Token-Based Authorization: Designed a system where only authenticated users with valid JWT tokens can access protected endpoints, enhancing security and access control.
-                        </li>
-                        <li>
-                          Product Management with CRUD Operations: Built a feature-rich product management module enabling authenticated users to perform Create, Read, Update, and Delete (CRUD) operations on product data via a ReactJS frontend and Spring Boot backend.
-                        </li>
-                        <li>
-                          Frontend-Backend Integration: Seamlessly connected the ReactJS-based frontend with the Spring Boot backend, providing real-time interaction, efficient data handling, and a smooth user experience.<br></br>
-                          <a href="https://github.com/jebasuwin/Auth-Login-Register" target="_blank">
-                            Project Link
-                          </a>
-                        </li>
+          <Nav
+            variant="pills"
+            activeKey={activeKey}
+            onSelect={(k) => setActiveKey(k)}
+            style={{ display: "inline-flex" }}
+          >
+            {projects.map(({ key, title }) => (
+              <Nav.Item key={key} style={{ display: "inline-block", margin: "0 10px" }}>
+                <Nav.Link className="nav-link-custom"
+                  eventKey={key} 
+                  style={{
+                    cursor: "pointer",
+                    fontWeight: activeKey === key ? "700" : "700",
+                    fontSize: "1.1rem",
+                    color: activeKey === key ? "#fff" : "#fff",
+                    whiteSpace: "normal", // allow wrapping if needed
+                     border: "none",
+                  }}
+                >
+                  {title}
+                </Nav.Link>
+              </Nav.Item>
+            ))}
+          </Nav>
+        </div>
 
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                    <li>
-                      This model textile eCommerce website is designed to showcase a curated selection of textile products in a visually appealing layout.
-                      </li>
-                      <li>
-                      It focuses on delivering a smooth user experience with intuitive navigation and responsive design. 
-                      </li>
-                      <li>
-                      The static structure ensures fast loading times, making it ideal for displaying product collections effectively across devices.
-                      </li>
-                      <li>
-                        Frontend-Backend Synergy: Built a dynamic frontend with ReactJS and integrated it with a robust Java Spring Boot backend, enabling real-time data interaction and seamless user experience.<br></br>
-                      <a href="https://jebasuwin.github.io/Textile--Ecommerce/" target="_blank">
-                      Project Link
-                      </a>
-                      </li>
-                      
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="fifth">
-                      
-                      <li>
-                        A Bus Reservation Project with JDBC involves creating a software system that allows users to search for and reserve bus tickets.
-                      </li>
-                      <li>
-                        It connects to a database to store and retrieve information, providing a seamless and efficient way for customers to book their journeys.<br></br>
-                      <a href="https://github.com/jebasuwin/BusReservation/tree/main/BusResv" target="_blank">
-                      Project Link
-                      </a>
-                      </li>                    
-                      </Tab.Pane>
-                      <Tab.Pane eventKey="fourth">
-                      
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="sixth">
-                    <li>
-                        Full Stack Application: Developed a comprehensive Employee Management System with interactive web pages for browsing, updating, and managing employee data using Java, Spring Boot, and MySQL for backend functionality.
-                      </li>
-                      <li>
-                        User Registration & Database Integration: Implemented secure user registration and efficient database handling with Spring Boot and MySQL, ensuring smooth user data storage and retrieval.
-                      </li>
-                      <li>
-                        CRUD Operations: Designed responsive web pages using ReactJS, HTML, CSS, and Bootstrap to support Create, Read, Update, and Delete (CRUD) operations for employee management.
-                      </li>
-                      <li>
-                        Frontend-Backend Synergy: Built a dynamic frontend with ReactJS and integrated it with a robust Java Spring Boot backend, enabling real-time data interaction and seamless user experience.<br></br>
-                      <a href="https://drive.google.com/file/d/1sG5UMEkr3sSgCN-TELnsMrdsBtaq23L0/view" target="_blank">
-                      Project Link
-                      </a>
-                      </li>
-                      </Tab.Pane>
-                      
-                      <Tab.Pane eventKey="fourth">
-                      
-                      <li>
-                      Developed a "Grocery Website" using HTML and CSS, focusing on a clean design, intuitive navigation, and mobile-friendly responsiveness for a seamless user experience across all devices.
-                      <a href="https://github.com/jebasuwin/GroceryProjects" target="_blank">
-                      Project Link
-                      </a>
-                    
-                    </li>
-                      
-                    </Tab.Pane>
-                  </Tab.Content>
-                </Tab.Container>
-              </div>}
-            </TrackVisibility>
+        <Row className="justify-content-center">
+          <Col md={8}>
+            <motion.div
+              key={selectedProject.key}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="bg-white bg-opacity-10 p-4 rounded-3 shadow-lg"
+              style={{ backdropFilter: "blur(10px)" }}
+            >
+              <h3 className="mb-3">{selectedProject.title}</h3>
+              <ul
+                className="list-unstyled"
+                style={{ lineHeight: "1.6", fontSize: "1.1rem" }}
+              >
+                {selectedProject.details.map((detail, i) => (
+                  <li
+                    key={i}
+                    className="mb-2"
+                    dangerouslySetInnerHTML={{ __html: detail }}
+                  />
+                ))}
+              </ul>
+            </motion.div>
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
     </section>
-  )
-}
+  );
+};
