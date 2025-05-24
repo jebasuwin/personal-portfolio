@@ -51,7 +51,7 @@ function App() {
           <WorkExperience />
         </div>
 
-        <div data-aos="zoom-in-down">
+        <div data-aos="zoom-out">
           <Projects />
         </div>
 
@@ -67,7 +67,7 @@ function App() {
           <Accomplishments />
         </div>
 
-        <div data-aos="zoom-in-up">
+        <div data-aos="zoom-out">
           <Contact />
         </div>
       </main>
