@@ -51,10 +51,10 @@ export const Accomplishments = () => {
           <Col size={12}>
             <div data-aos="fade-right" data-aos-duration="1000">
               <h2>Interests</h2>
-              <li>Workouts 💪</li>
-              <li>Volley Ball 🏐</li>
-              <li>Photography 📸</li>
-              <li>Web Designing 💻</li>
+              <p>Workouts 💪</p>
+              <p>Volley Ball 🏐</p>
+              <p>Photography 📸</p>
+              <p>Web Designing 💻</p>
               <br /><br /><br /><br />
             </div>
           </Col>

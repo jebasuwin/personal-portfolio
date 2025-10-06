@@ -37,6 +37,22 @@ export const Training = () => {
                 <a href="https://drive.google.com/file/d/1sG5UMEkr3sSgCN-TELnsMrdsBtaq23L0/view" target="_blank">
                       Certification Link
                 </a>
+                <br></br><br></br>
+                MySql - SimpliLearn<br></br>
+                May 2025 - Jun 2025<br></br>
+                <a href="https://drive.google.com/file/d/1tSHD-ojj7-ShI0Q-URH888AnWpgXtrzR/view" target="_blank">
+                      Certification Link
+                </a>
+                <br></br><br></br>
+                Spring framework | Hibernate - SimpliLearn<br></br>
+                May 2025 - Jun 2025<br></br>
+                <a href="https://drive.google.com/file/d/1qx8u-E_CY5_k1Ns6wASsYyEDfR1NRCHk/view" target="_blank">
+                      Spring Framework Certification Link
+                </a><br></br>
+                <a href="https://drive.google.com/file/d/1wMeJIVL67nkVhqvH9Xc0j1ENuJZfZ6_u/view" target="_blank">
+                      Hibernate Certification Link
+                </a>
+                
                 </p>
               </div>}
             </TrackVisibility>

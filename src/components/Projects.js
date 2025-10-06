@@ -10,7 +10,7 @@ const projects = [
     title: "HomieFix Application",
     details: [
       "Developed backend APIs for the mobile app and full-stack web admin panel.",
-      "Implemented OTP login (Twilio), JWT authentication, and role-based access.",
+      "Implemented OTP login (Twilio), JWT authentication, payment Gateway(Razorpay) and role-based access.",
       "Integrated push notifications, email alerts, and dynamic dashboards.",
       "Managed service booking, pricing, and user modules with MySQL.",
       "Built responsive UI with React.js and Bootstrap for admin operations. ",

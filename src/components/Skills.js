@@ -7,6 +7,7 @@ import java from "../assets/img/java.png";
 import web from "../assets/img/web.png";
 import git from "../assets/img/git.png";
 import sql from "../assets/img/sql.png";
+import Microservices from "../assets/img/Microservices.png";
 import javascript from "../assets/img/javascript.png";
 import bootstrap from "../assets/img/bootstrap.png";
 import Carousel from 'react-multi-carousel';
@@ -59,6 +60,10 @@ export const Skills = () => {
                 <div className="item">
                   <img src={React} alt="ReactJs" />
                   <h5>ReactJs</h5>
+                </div>
+                <div className="item">
+                  <img src={Microservices} alt="Microservices" />
+                  <h5>Microservices</h5>
                 </div>
                 <div className="item">
                   <img src={spring} alt="SpringBoot" />
